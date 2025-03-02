@@ -54,7 +54,7 @@ class Solution:
             path.add(current_node)
             if self.has_cycle(neighbor, adj, visited_nodes, path):
                 return True
-            path.remove(current_node)
+            path.delete(current_node)
 
         return False
 

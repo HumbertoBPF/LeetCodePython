@@ -59,13 +59,13 @@ class Solution:
 
         for neighbor in neighbors:
             # Remove the current course from the list of prerequisites of the current neighbor since it was just taken
-            prerequisites_map[neighbor].remove(current_course)
+            prerequisites_map[neighbor].delete(current_course)
             # We just move to a course if all prerequisites have already been taken
             if len(prerequisites_map[neighbor]) == 0:
                 path.add(current_course)
                 if self.has_cycle(neighbor, adj, prerequisites_map, taken, path, courses_ordering):
                     return True
-                path.remove(current_course)
+                path.delete(current_course)
 
         return False
 

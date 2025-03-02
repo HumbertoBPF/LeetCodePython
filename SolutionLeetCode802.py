@@ -52,7 +52,7 @@ class Solution:
                 unsafe_nodes.add(vertex)
                 return True
 
-        path.remove(vertex)
+        path.delete(vertex)
         return False
 
 
